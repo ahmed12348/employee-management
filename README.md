@@ -8,11 +8,19 @@ The **Task Management System** is a Laravel-based web application designed to st
 
 ## Features
 
-- **Role-Based Access Control**: Distinct features for managers and employees.
-- **Task Assignment**: Managers can assign tasks to employees in their departments.
-- **User and Department Management**: Manage users, departments, and their associations.
-- **Responsive Design**: Fully optimized for both desktop and mobile use.
-- **Search and Filtering**: Filter users and tasks by department, role, or keywords.
+- **Role-Based Access Control**: 
+  - Managers: Assign and manage tasks for employees within their department.
+  - Employees: View and update tasks assigned to them.
+- **Task Assignment and Management**: 
+  - Assign tasks with details such as status, description, and associated employees.
+- **User and Department Management**:
+  - Create, update, and filter users by role and department.
+- **Repository Design Pattern**:
+  - A clean and decoupled codebase for easier maintenance and scalability.
+- **Search and Filtering**:
+  - Easily locate users and tasks by name, email, role, or department.
+- **Responsive Design**:
+  - Fully optimized for desktop and mobile devices.
 
 ---
 
@@ -52,6 +60,20 @@ Before running this project, ensure you have:
 php artisan key:generate
 php artisan serve
 
+6.**Code Structure & Enhancements**
+
+**The project implements the Repository Design Pattern to separate business logic from the database layer. This makes the codebase more modular and easier to extend. Key repositories include:**
+
+-UserRepository: Handles user-related database operations.
+-TaskRepository: Manages task-related operations.
+-DepartmentRepository: Focuses on department operations.
+
+**Future Enhancements**
+**The system has been designed with scalability in mind. Potential enhancements include:**
+
+-Integration with third-party task management tools.
+-Adding notifications (email or SMS) for task updates.
+-Advanced reporting features for task progress and user activity.
 
 **Manager**
 Email: manager@example.com
